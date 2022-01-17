@@ -21,9 +21,9 @@ from newyear import urls, views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.index,name='index'),
+    # path('',views.index,name='index'),
     path('first_app/',include('first_app.urls')),
     path('newyear/',include('newyear.urls')),
-    path('tasks/',include('tasks.urls')),
+    path('',include('tasks.urls')),
 
 ]
