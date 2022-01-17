@@ -7,6 +7,5 @@ urlpatterns = [
     path('hello',views.index,name='index'),
     path('brain',views.brain,name="brain"),
     path('david',views.david,name="david"),
-    path('<str:name>',views.Greet,name="Greet"),
-    
+    path('<str:name>',views.Greet,name="Greet"),   
 ]

@@ -27,7 +27,4 @@ urlpatterns = [
     path('first_app/',include('first_app.urls')),
     path('newyear/',include('newyear.urls')),
     path('',include('tasks.urls')),
-
-    
-
 ]
