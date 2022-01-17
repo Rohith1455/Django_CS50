@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include
+from django.conf.urls import url
+from django.views.static import serve
 from first_app import urls, views
 from newyear import urls, views
 
@@ -25,5 +27,9 @@ urlpatterns = [
     path('first_app/',include('first_app.urls')),
     path('newyear/',include('newyear.urls')),
     path('',include('tasks.urls')),
+
+    url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
+    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
+
 
 ]
